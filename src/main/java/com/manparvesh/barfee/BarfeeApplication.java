@@ -21,7 +21,9 @@ public class BarfeeApplication {
         // show main GUI using SWT when application loads
         // if bean not present for UI, abort
         if (applicationContext.containsBeanDefinition("ui")) {
-            applicationContext.getBean(MainUI.class).open();
+            applicationContext.getBean(MainUI.class).run(new String[] {});
+        } else {
+            applicationContext.close();
         }
     }
 }
