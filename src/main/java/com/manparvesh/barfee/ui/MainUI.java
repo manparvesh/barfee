@@ -46,7 +46,7 @@ public class MainUI extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         // Parent root = FXMLLoader.load(getClass().getResource("BarfeeWindow.fxml"));
 
         TextArea mainTextArea = new TextArea();
@@ -59,12 +59,12 @@ public class MainUI extends Application {
 
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
 
-        double windowWidth = primaryScreenBounds.getWidth() * 0.9;
-        double windowHeight = primaryScreenBounds.getHeight() * 0.9;
+        double windowWidth = primaryScreenBounds.getWidth();
+        double windowHeight = primaryScreenBounds.getHeight();
 
         //set Stage boundaries to visible bounds of the main screen
-        primaryStage.setX(primaryScreenBounds.getMinX() + primaryScreenBounds.getWidth() * 0.05);
-        primaryStage.setY(primaryScreenBounds.getMinY() + primaryScreenBounds.getHeight() * 0.05);
+        primaryStage.setX(primaryScreenBounds.getMinX());
+        primaryStage.setY(primaryScreenBounds.getMinY());
         primaryStage.setWidth(windowWidth);
         primaryStage.setHeight(windowHeight);
         log.info("x={}, y={}, width={}, height={}",
@@ -137,10 +137,6 @@ public class MainUI extends Application {
                 primaryStage.setTitle(String.format(FILE_NAME_FORMAT, currentFile.getName(), FILE_MODIFIED));
             }
         });
-
-        // todo add menu that contains things like file open, etc
-
-        // todo add support for multiple files
 
         primaryStage.show();
     }
