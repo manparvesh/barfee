@@ -3,7 +3,6 @@
   <h1>barfee</h1>
 
 <a href="https://travis-ci.org/manparvesh/barfee"><img src="https://img.shields.io/travis-ci/manparvesh/barfee.svg?style=flat-square" alt="Build status"></a> <a href="https://manparvesh.mit-license.org/"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a> 
-  <a href="https://github.com/manparvesh/barfee">
 
   <p>Text editor written in Java</p><br>
 
