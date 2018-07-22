@@ -1,0 +1,6 @@
+language: java
+script:
+  - ./mvnw test
+
+notifications:
+  email: false
