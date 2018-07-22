@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 public class BarfeeApplication {
     public static void main(String[] args) {
-        // TODO start splash screen using SWT
+        // TODO start splash screen
 
         // starting spring boot application
         ConfigurableApplicationContext applicationContext = SpringApplication.run(BarfeeApplication.class, args);
